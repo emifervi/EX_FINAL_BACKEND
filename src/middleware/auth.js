@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 var secret;
 if(process.env.NODE_ENV === 'production') {
-  secret = process.env.DATABASE_URL;
+  secret = process.env.SECRET;
 } else {
   secret = require('../config').secret;
 }
